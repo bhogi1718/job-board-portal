@@ -1,0 +1,27 @@
+.profile-page { padding: 100px 0 80px; min-height: 100vh; }
+.profile-layout { display: grid; grid-template-columns: 280px 1fr; gap: 28px; align-items: start; }
+.profile-sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 90px; }
+
+.profile-avatar-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.profile-avatar { width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), var(--purple)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.profile-avatar-card h2 { font-size: 1.2rem; }
+.profile-email { font-size: 13px; color: var(--text-2); }
+
+.resume-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+.resume-card-header { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 14px; }
+.resume-file { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; color: var(--text-2); }
+.no-resume { font-size: 13px; color: var(--text-3); }
+
+.profile-form { display: flex; flex-direction: column; gap: 0; }
+.profile-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 32px 36px; margin-bottom: 16px; }
+.profile-section h2 { font-size: 1.1rem; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.form-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
+.file-upload-area { border: 2px dashed var(--border-2); border-radius: var(--radius-lg); padding: 28px; text-align: center; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-2); font-size: 14px; }
+.file-upload-area:hover { border-color: var(--accent); background: rgba(59,130,246,0.04); color: var(--accent-2); }
+.upload-icon { font-size: 28px; }
+.upload-hint { font-size: 12px; color: var(--text-3); }
+.profile-actions { padding: 8px 0; }
+
+@media (max-width: 1024px) { .profile-layout { grid-template-columns: 1fr; } .profile-sidebar { position: static; } }
+@media (max-width: 768px) { .form-grid-2 { grid-template-columns: 1fr; } .profile-section { padding: 24px 20px; } }

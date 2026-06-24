@@ -1,0 +1,66 @@
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100; padding: 18px 0;
+  transition: all 0.25s ease;
+}
+.navbar.scrolled {
+  background: rgba(15,17,23,0.88);
+  backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid var(--border);
+  padding: 13px 0;
+}
+
+.navbar-inner { display: flex; align-items: center; gap: 32px; }
+
+.navbar-logo {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--font-body); font-size: 17px; font-weight: 800;
+  color: var(--text); flex-shrink: 0; letter-spacing: -0.01em;
+}
+.nav-logo-icon {
+  width: 28px; height: 28px;
+  background: var(--accent); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.navbar-links { display: flex; align-items: center; gap: 2px; flex: 1; }
+.navbar-links a {
+  padding: 6px 13px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; color: var(--text-2);
+  transition: all 0.15s;
+}
+.navbar-links a:hover { color: var(--text); background: var(--surface); }
+.navbar-links a.active { color: var(--text); background: var(--surface); }
+
+.navbar-actions { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+
+.user-menu { display: flex; align-items: center; gap: 10px; }
+.user-avatar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 5px 12px 5px 5px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 100px; transition: all 0.15s;
+}
+.user-avatar:hover { border-color: var(--border-2); }
+.avatar-circle {
+  width: 26px; height: 26px;
+  background: var(--accent); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; color: #fff;
+  flex-shrink: 0;
+}
+.user-name { font-size: 13px; font-weight: 600; color: var(--text); }
+.logout-btn { display: none; }
+.user-menu:hover .logout-btn { display: inline-flex; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; margin-left: auto; }
+.hamburger span { display: block; width: 20px; height: 2px; background: var(--text-2); border-radius: 2px; }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--bg-2); border-bottom: 1px solid var(--border); padding: 10px; gap: 2px; }
+  .navbar-links.open { display: flex; }
+  .navbar-links a { width: 100%; }
+  .logout-btn { display: inline-flex !important; }
+}

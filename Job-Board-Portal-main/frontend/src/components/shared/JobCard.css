@@ -1,0 +1,47 @@
+.job-card {
+  position: relative; display: flex; flex-direction: column; gap: 14px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px;
+  transition: all 0.2s ease; overflow: hidden; color: var(--text);
+}
+.job-card:hover {
+  border-color: rgba(108,142,255,0.3);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35), 0 0 0 1px rgba(108,142,255,0.08);
+  transform: translateY(-2px);
+}
+
+.featured-ribbon {
+  position: absolute; top: 14px; right: -26px;
+  background: var(--accent); color: #fff;
+  font-size: 10px; font-weight: 800; letter-spacing: 0.06em;
+  padding: 4px 34px 4px 12px; transform: rotate(45deg);
+  transform-origin: center; text-transform: uppercase;
+}
+
+.job-card-header { display: flex; align-items: center; gap: 12px; }
+.company-logo {
+  width: 42px; height: 42px; border-radius: 10px;
+  background: var(--surface-2); border: 1px solid var(--border);
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 16px; font-weight: 800; color: var(--accent-2);
+}
+.company-logo img { width: 100%; height: 100%; object-fit: cover; }
+.job-card-meta { flex: 1; min-width: 0; }
+.company-name { font-size: 13px; font-weight: 700; color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.posted-time { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+.salary-tag {
+  font-size: 12px; font-weight: 700; color: var(--green);
+  background: var(--green-dim); border: 1px solid rgba(52,211,153,0.18);
+  padding: 4px 9px; border-radius: 7px; white-space: nowrap; flex-shrink: 0;
+}
+
+.job-title { font-size: 16px; font-weight: 700; color: var(--text); line-height: 1.35; transition: color 0.15s; font-family: var(--font-body); }
+.job-card:hover .job-title { color: var(--accent-2); }
+
+.job-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.job-card-info { display: flex; gap: 16px; font-size: 12px; color: var(--text-2); }
+.job-card-info span { display: flex; align-items: center; gap: 5px; }
+
+.job-skills { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 10px; border-top: 1px solid var(--border); }
+.skill-tag { font-size: 11px; padding: 3px 9px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px; color: var(--text-2); font-weight: 600; }
+.skill-more { color: var(--text-3); }
